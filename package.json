@@ -1,5 +1,5 @@
 {
-  "name": "Template Repository",
+  "name": "weather_app",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
@@ -13,16 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agscheaua/templateRepository"
+    "url": "git+https://github.com/agscheaua/Weather-App"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/agscheaua/templateRepository/issues"
+    "url": "https://github.com/agscheaua/Weather-App/issues"
   },
-  "homepage": "https://github.com/agscheaua/templateRepository",
+  "homepage": "https://github.com/agscheaua/Weather-App",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "css-loader": "^7.1.4",

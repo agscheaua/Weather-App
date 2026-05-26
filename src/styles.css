@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.weatherAppContainer {
+  border: 0px solid black;  
+  width: 80%;
+  height: 100vh;
+  margin: 0px auto; 
+}
+
+#location {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  width: 80%;
+}
+
+.searchButton {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
