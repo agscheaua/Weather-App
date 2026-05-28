@@ -1,3 +1,6 @@
+/* general style rules;
+*/
+
 *,
 *::before,
 *::after {
@@ -6,20 +9,52 @@
   margin: 0px;
 }
 
+/* weatherAppContainer section styles
+*/
+
 .weatherAppContainer {
-  border: 0px solid black;  
+  border: 1px solid black;  
   width: 80%;
   height: 100vh;
   margin: 0px auto; 
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 5fr;
+  grid-template-columns: 1fr;
+}
+
+/* locationSearchControls section styles;
+*/
+
+.locationSearchControls {
+  border: 1px solid black;
 }
 
 #location {
   font-size: 1.5rem;
-  margin-top: 10px;
   width: 80%;
+  margin: 10px 0px 10px 10px;
+  border: 1px solid;
+  padding: 2px;
 }
 
 .searchButton {
   font-size: 1.5rem;
-  margin-top: 10px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 2px;
+}
+
+/* currentDayInfo section styles;
+*/
+
+.currentDayInfo {
+  border: 1px solid black;
+}
+
+/* futureDaysInfo section styles;
+*/
+
+.futureDaysInfo {
+  border: 1px solid black;
 }

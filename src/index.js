@@ -1,4 +1,6 @@
 import './styles.css'
-import { getLocationWeatherData } from './queryLocation.js';
+import { searchForWeatherData } from './queryLocation.js';
+import { iconHolder } from './iconDayCondition.js';
 
-getLocationWeatherData("london","uk"); 
+searchForWeatherData();
+console.log(iconHolder);
