@@ -3,4 +3,5 @@ import { searchForWeatherData } from './queryLocation.js';
 import { iconHolder } from './iconDayCondition.js';
 
 searchForWeatherData();
-console.log(iconHolder);
+const iconContainer = document.querySelector(".iconContainer");
+iconContainer.innerHTML = iconHolder["clear-day"];

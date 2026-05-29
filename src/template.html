@@ -8,37 +8,46 @@
   <body>
     <div class="weatherAppContainer">
       <div class="locationSearchControls">
-        <form action="" method="" class="searchFormContainer" novalidate>
-          <input type="text" name="locationToSearchWeatherData" id="location" placeholder="london, uk" required/>
-          <button type="submit" class="searchButton">Search!</button>
-        </form>
+        <div class="searchContainer">
+          <form action="" method="" class="searchForm" novalidate>
+            <input
+              type="text"
+              name="locationToSearchWeatherData"
+              id="location"
+              placeholder="london, uk"
+              required
+            />
+            <button type="submit" class="searchButton">Search!</button>
+          </form>
+        </div>
       </div>
-      <div class="currentDayInfo">
-        <div class="iconContainer">
 
-        </div>
+      <div class="currentDayInfo">
+        <div class="iconContainer"></div>
         <div class="detailsDay">
-          <div class="temperatureDay"></div>
-          <span class="locationDay infoDay"></span>
-          <span class="hourDay infoDay"></span>
+          <div class="temperatureDay">20 C</div>
+          <span class="currentConditions infoDay"
+            >Partially cloudy in London, Uk, at 21:32</span
+          >
         </div>
       </div>
+
       <div class="futureDaysInfo">
         <div class="day0 futureInfo">
-          <span class="dateOfInfo"></span>
-          <span class="descriptionOfDay"></span>
-          <span class="precipprobDay"></span>
+          <span class="dateOfInfo">Today</span>
+          <span class="descriptionOfDay">Partially cloudy</span>
+          <span class="precipprobDay">20%</span>
           <span class="iconDay"></span>
-          <span class="maxTempDay"></span>
-          <span class="minTempDay"></span>
+          <span class="maxTempDay">20C</span>
+          <span class="minTempDay">10C</span>
         </div>
         <div class="day1 futureInfo">
-          <span class="dateOfInfo"></span>
-          <span class="descriptionOfDay"></span>
-          <span class="precipprobDay"></span>
+          <span class="dateOfInfo">Today</span>
+          <span class="descriptionOfDay">Partially cloudy</span>
+          <span class="precipprobDay">20%</span>
           <span class="iconDay"></span>
-          <span class="maxTempDay"></span>
-          <span class="minTempDay"></span>
+          <span class="maxTempDay">20C</span>
+          <span class="minTempDay">10C</span>
         </div>
         <div class="day2 futureInfo">
           <span class="dateOfInfo"></span>

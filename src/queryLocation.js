@@ -19,11 +19,11 @@ const getLocationWeatherData = async function(location) {
 
 // triggres the action to fetch data;
 
-function searchForWeatherData() {
+const searchForWeatherData = async function() {
   searchButton.addEventListener("click", async (eve) => {
     eve.preventDefault();
     if (location.validity.valueMissing) {
-      location.value = "Please input the city name, and the country code."
+      console.log("No location.")
     } else {
       getLocationWeatherData(location.value);
     };
