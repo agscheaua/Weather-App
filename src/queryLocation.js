@@ -1,31 +1,54 @@
-export {searchForWeatherData};
+//export { searchForWeatherData }
 
-const location = document.getElementById("location");
-const searchButton = document.querySelector(".searchButton");
+const location = document.getElementById('location');
+const searchButton = document.querySelector('.searchButton');
 
-// fetch the data for a specific city and return an obj with that data;
+// fetch the weather data for a specific city and return an obj 
+// containing the requested data;
 
-const getLocationWeatherData = async function(location) {
-  try {
-    const request = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline?location=${String(location)}&key=7EW6WCRF34MYYV77KCDY42979&unitGroup=metric&iconSet=icons1`);
-    const requestResponseParsedToObj = await request.json();
-    console.log(requestResponseParsedToObj);
+async function getLocationWeatherData(location) {
+  const request = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline?location=${String(location)}&key=7EW6WCRF34MYYV77KCDY42979&unitGroup=metric&iconSet=icons1`);
+  const requestResponseParsedToObj = await request.json();
+  if (requestResponseParsedToObj) {
     return requestResponseParsedToObj;
-  } catch(error) {
-    console.log(error);
-    console.log("getLocationWeatherData, problem");
+  } else {
+    console.log('getLocationWeatherData, problem');
   };
 };
 
-// triggres the action to fetch data;
-
-const searchForWeatherData = async function() {
-  searchButton.addEventListener("click", async (eve) => {
+// triggres the action to fetch data when we press the search button;
+/*
+let requestedWeatherData;
+async function searchForWeatherData() {
+  searchButton.addEventListener('click', async (eve) => {
     eve.preventDefault();
     if (location.validity.valueMissing) {
-      console.log("No location.")
+      console.log('No location.');
     } else {
-      getLocationWeatherData(location.value);
+      requestedWeatherData = await getLocationWeatherData(location.value);
+      console.log(requestedWeatherData);
     };
   });
 };
+*/
+
+async function test1() {
+  let requestedWeatherData;
+  searchButton.addEventListener("click", async (eve) => {
+    eve.preventDefault();
+    requestedWeatherData = await getLocationWeatherData(location.value);
+    return requestedWeatherData;
+  });
+  return requestedWeatherData;
+}; 
+test1();
+
+function change() {
+  searchButton.addEventListener("click", async (eve) => {
+    eve.preventDefault();
+    const alex1 = await test1()
+    console.log(alex1);
+    location.value = alex1;
+  });
+};
+change();
