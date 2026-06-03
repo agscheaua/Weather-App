@@ -1,7 +1,6 @@
-import './styles.css'
-import { searchForWeatherData } from './queryLocation.js'
-import { iconHolder } from './iconDayCondition.js'
+import "./styles.css";
+import {getWeatherData} from "./queryLocation.js";
+import {} from "./iconDayCondition.js";
+import {} from "./domControl.js";
 
-//searchForWeatherData();
-const iconContainer = document.querySelector('.iconContainer')
-iconContainer.innerHTML = iconHolder['clear-day']
+getWeatherData();

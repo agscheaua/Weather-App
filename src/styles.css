@@ -13,12 +13,10 @@
 */
 
 .weatherAppContainer {
-  border: 1px solid black;
   width: 70%;
-  height: 100vh;
   margin: 0px auto;
   display: grid;
-  grid-template-rows: 0.5fr 2fr 5fr;
+  grid-template-rows: 60px 200px 1fr;
   grid-template-columns: 1fr;
 }
 
@@ -28,15 +26,24 @@
 .locationSearchControls {
   width: 100%;
   margin: 0px auto;
+  border: 1px solid black;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+.searchForm {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
 }
 
 #location {
   font-size: 1.5rem;
-  width: 85%;
   margin: 10px 0px 10px 10px;
   border: 1px solid;
   padding: 2px;
   border-radius: 7px;
+  flex-grow: 1;
 }
 
 .searchButton {
@@ -52,6 +59,7 @@
 
 .currentDayInfo {
   border: 1px solid black;
+  border-bottom: 0;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -59,7 +67,7 @@
 
 .iconContainer {
   width: 180px;
-  height: 180px;
+  height: 120px;
   grid-row: 1/3;
   align-self: center;
   margin: 0px auto;
@@ -85,12 +93,26 @@
 
 .futureDaysInfo {
   border: 1px solid black;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
 }
 
 .futureInfo {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.iconDay {
+  height: 80px;
+  width: 80px;
+}
+
+.precipprobDay,
+.maxTempDay,
+.minTempDay {
+  text-align: center;
 }
