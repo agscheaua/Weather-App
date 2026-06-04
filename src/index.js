@@ -1,6 +1,7 @@
 import "./styles.css";
-import {getWeatherData} from "./queryLocation.js";
+import {getWeatherData, createInitialContent} from "./queryLocation.js";
 import {} from "./iconDayCondition.js";
 import {} from "./domControl.js";
 
 getWeatherData();
+createInitialContent();

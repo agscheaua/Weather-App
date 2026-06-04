@@ -2,6 +2,7 @@ import {changeTheIcon, changeTemperature, changeDescription, changeFutureDays}
   from "./domControl.js";
 
 export {getWeatherData};
+export {createInitialContent};
 
 const location = document.getElementById('location');
 const searchButton = document.querySelector('.searchButton');
@@ -22,12 +23,27 @@ async function getLocationWeatherData(location) {
 async function getWeatherData() {
   searchButton.addEventListener("click", async (eve) => {
     eve.preventDefault();
-    const resultSearchWeather = await getLocationWeatherData(location.value);
-    console.log(resultSearchWeather);
+    if (location.validity.valueMissing) {
+      console.log("empty input");
+    } else {
+      const resultSearchWeather = await getLocationWeatherData(location.value);
+      location.value = "";
+      console.log(resultSearchWeather);
 
-    changeTheIcon(resultSearchWeather);
-    changeTemperature(resultSearchWeather);
-    changeDescription(resultSearchWeather);
-    changeFutureDays(resultSearchWeather);
+      changeTheIcon(resultSearchWeather);
+      changeTemperature(resultSearchWeather);
+      changeDescription(resultSearchWeather);
+      changeFutureDays(resultSearchWeather);
+
+    };
   });
 };
+
+async function createInitialContent() {
+  const resultSearchWeather = await getLocationWeatherData("London, UK");
+
+  changeTheIcon(resultSearchWeather);
+  changeTemperature(resultSearchWeather);
+  changeDescription(resultSearchWeather);
+  changeFutureDays(resultSearchWeather);
+}
